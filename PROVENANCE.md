@@ -3,7 +3,9 @@
 Nothing here was drawn for this repository. Every file is either copied byte for byte out of a
 product repository, or derived mechanically from one of those files. This page records which.
 
-Assembled on 2026-09-24.
+Assembled on 2026-09-24. Re-synced the same day after `invoicerr-app/invoicerr#458` corrected the
+lockup's geometry: the three lockup SVGs were copied again from the frontend, and the four rasters
+derived from them were regenerated rather than resampled. See "Re-syncs" at the foot of this page.
 
 ## Copied unchanged
 
@@ -81,3 +83,25 @@ touched.
 - **A light Open Graph card**, for the same reason.
 - **A light-ground variant of anything else.** Not needed: the default lockup, mark and wordmark are
   already the light-ground versions.
+
+## Re-syncs
+
+A source file in a product repository can change after it was copied here. When that happens the
+copy is taken again and every raster derived from it is regenerated from the vector, never resampled
+from the older bitmap. Each re-sync is recorded here with what moved and why.
+
+### 2026-09-24 - lockup geometry
+
+`invoicerr-app/invoicerr#458` recentred the mark on the wordmark's ink centroid and removed the
+padding the canvas carried. The viewBox went from `0 0 258.6978 72` to `0 0 233.3267 58.428`, and
+the two group transforms moved with it. Every path `d` string and every fill is unchanged: no
+artwork was redrawn and no font was substituted for the outlined wordmark.
+
+Copied again: `logo/lockup.svg`, `logo/lockup-ink.svg`, `logo/lockup-white.svg`.
+
+Regenerated: `png/lockup-1024.png`, `png/lockup-512.png`, `png/lockup-white-1024.png` with
+`rsvg-convert -w <size>`, and `preview/lockup-white-on-dark.png` the same way then
+`magick -background '#0a1215' -alpha remove -bordercolor '#0a1215' -border 40`.
+
+The rasters are shorter than before because the lockup is: `png/lockup-1024.png` went from
+1024 x 285 to 1024 x 257. Nothing in the README fixes a height, so no markup needed changing.
