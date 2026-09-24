@@ -24,7 +24,7 @@ The mark alone. A rounded square cut along a 19.3 degree slash, the right half l
 
 | | | |
 | --- | --- | --- |
-| <img src="https://raw.githubusercontent.com/invoicerr-app/brand/main/logo/mark-duo.svg" height="72"> | <img src="https://raw.githubusercontent.com/invoicerr-app/brand/main/logo/mark.svg" height="72"> | <img src="https://raw.githubusercontent.com/invoicerr-app/brand/main/logo/mark-white.svg" height="72" style="background:#0a1215"> |
+| <img src="https://raw.githubusercontent.com/invoicerr-app/brand/main/logo/mark-duo.svg" height="72"> | <img src="https://raw.githubusercontent.com/invoicerr-app/brand/main/logo/mark.svg" height="72"> | <img src="https://raw.githubusercontent.com/invoicerr-app/brand/main/preview/mark-white-on-dark.png" height="72"> |
 | **mark-duo.svg** | **mark.svg** | **mark-white.svg** |
 | The default. Ink plus azure. Use it on any light ground. | Single-ink. For one-colour printing, a stamp, or anywhere the azure would clash. | For a dark or photographic ground, where the ink half would disappear. |
 
@@ -46,7 +46,7 @@ The default lockup. Ink wordname, duo mark. **Use this one unless you have a rea
 https://raw.githubusercontent.com/invoicerr-app/brand/main/logo/lockup.svg
 ```
 
-<img src="https://raw.githubusercontent.com/invoicerr-app/brand/main/logo/lockup-white.svg" width="340" style="background:#0a1215">
+<img src="https://raw.githubusercontent.com/invoicerr-app/brand/main/preview/lockup-white-on-dark.png" width="360">
 
 All white, for a dark ground. This is what the documentation site's navbar switches to in dark mode.
 
@@ -67,6 +67,8 @@ PNG: [lockup-512.png](https://raw.githubusercontent.com/invoicerr-app/brand/main
 ## The wordname alone
 
 <img src="https://raw.githubusercontent.com/invoicerr-app/brand/main/logo/wordmark.svg" width="260">
+
+<img src="https://raw.githubusercontent.com/invoicerr-app/brand/main/preview/wordmark-white-on-dark.png" width="290">
 
 For a context that already carries the mark right next to it, such as a header whose favicon is
 already the mark.
@@ -154,6 +156,14 @@ light and a dark browser tab. The PNG pairs cover the browsers that understand `
 - **Do not redraw or recolour the mark.** If none of the variants fits your ground, ask.
 - **Leave clear space** around the logo of at least the height of the mark's own corner radius.
 - Read [TRADEMARK.md](./TRADEMARK.md) before using the name or the mark for anything of your own.
+
+## A note on the previews in this page
+
+The three images above showing a white asset on a dark plate live in `preview/`. They are PNGs with
+the background baked in, and they exist only so this page stays readable: GitHub strips a `style`
+attribute from a README, so a white SVG shown here directly would be invisible under the light theme.
+**Do not use `preview/` anywhere else.** The assets to link to are the SVGs, whose raw URLs are in the
+code block under each one.
 
 ## Where these came from
 

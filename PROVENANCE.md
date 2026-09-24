@@ -31,6 +31,7 @@ frontend copy is treated as canonical because it is the one the brand SVGs' own 
 | `logo/mark-white.svg` | `logo/mark.svg` | Both fills changed `#0f1f2a` to `#ffffff`, the same swap `logo-white.svg` performs on the full lockup. Clip-path ids renamed. |
 | `logo/wordmark-white.svg` | `logo/wordmark.svg` | Same `#0f1f2a` to `#ffffff` swap. |
 | `social/banner.png` | `social/banner.webp` | `magick banner.webp banner.png`, no resize, 1621 x 810. A PNG alongside the WebP for the few renderers that still do not take WebP. |
+| `preview/*.png` | the matching white `logo/*.svg` | `rsvg-convert` then `magick -background '#0a1215' -alpha remove`, which bakes the dark page background in. README display only, because GitHub strips a `style` attribute from a README and a white SVG shown directly would be invisible under the light theme. Never a distributable asset. |
 | `png/*` | the matching `logo/*.svg` | `rsvg-convert` (librsvg), vector rasterisation at the target pixel size, not a resample of a smaller bitmap. |
 
 ### Why those PNG sizes and no others
