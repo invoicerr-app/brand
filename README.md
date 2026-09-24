@@ -7,8 +7,10 @@
 Every Invoicerr logo, icon and social image, in one place, so a Markdown file anywhere in the
 organisation can link to a stable URL instead of carrying its own copy.
 
-- **[DESIGN.md](./DESIGN.md)** - the palette, typefaces and radii, each value cited from the file in
-  the product it was read out of.
+- **[DESIGN.md](./DESIGN.md)** - the palette, typefaces and radii, in the
+  [DESIGN.md format](https://www.npmjs.com/package/@google/design.md): machine-readable tokens in the
+  YAML front matter, so a tool can diff them against what the product actually declares, and the
+  citation of the source file for every value in the prose below it.
 - **[TRADEMARK.md](./TRADEMARK.md)** - what you may do with the name and the logos, and what you may
   not. The code is AGPL-3.0; these assets are not.
 
